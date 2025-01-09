@@ -1,0 +1,40 @@
+/* Login page styles */
+
+body {
+    background-image: url('images/Background2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.login {
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    margin-top: 170px;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bolder;
+    box-shadow: 5px 5px 5px black;
+}
+.input:focus+label{
+    transform: translateY(-25px);
+    color: aquamarine;
+}
+/* .login.inp{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+} */
+.btn{
+    width: 25%;
+    padding: 6px;
+    background-color: #c4861b;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* Center place */
+    margin-left: 37%;
+}
