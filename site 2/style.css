@@ -1,0 +1,324 @@
+/* @media for the site to adjust to any screen size */
+
+@media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+    nav ul li {
+      margin: 1rem 0;
+    }
+  }
+
+  
+  /* General styles */
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: gold;
+  }
+  
+  header {
+    background:black;
+    color: #fff;
+    padding: 1rem;
+    animation-name: bar-Nav;
+    animation-duration: 2s;
+
+  }
+  @keyframes bar-Nav {
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+  }
+  .icon{
+    width: 50px;
+    height: 50px;
+    animation-name: icon;
+    animation-duration: 5s;
+  }
+  @keyframes icon {
+    0%{
+        opacity: 0;
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    100%{
+        opacity: 1;
+        transform: translate3d(0, 0, 0) rotate(360deg);
+    } 
+  }
+    .icon:hover{
+        /* Smooth */
+        transition: transform 0.5s;
+        transform: scale(1.1);
+
+    }
+
+    .mar{   
+        margin-left: 30px;
+        width: 150px;
+        border:  0px gold;
+        border-radius: 20px;
+        box-shadow: 0 0 10px 2px gold;
+    }
+  .header{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: gold;
+    animation-name: header;
+    animation-duration: 3s;
+  }
+  @keyframes header {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{   
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    border: dotted 1px gold;
+    border-radius: 15px ;
+    padding: 10px;
+    animation-name: nav;
+    animation-duration: 4s;
+  }
+  @keyframes nav {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+  }
+
+  
+  nav ul li {
+    display: inline;
+    margin: 0 1rem;
+  }
+  
+  nav ul li a {
+    color: gold;
+    text-decoration: none;
+  }
+  nav ul li a:hover {
+    color: white;
+  }
+  
+  section {
+    padding: 2rem;
+    text-align: center;
+  }
+  .card1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    animation-name: img;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes img {
+    0% {
+        box-shadow: 0 0 5px gold, 0 5 10px gold, 0 10 15px gold;
+      }
+      50%{
+        
+        box-shadow: 0 0 10px rgb(248, 2, 195), 0 0 20px rgb(235, 6, 223), 0 0 30px gold;
+      }
+      100%,1% {
+        box-shadow: 0 0 15px white, 0 0 30px #74f611, 0 0 50px #ff00ff;
+      }
+      1%,0%{
+        box-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
+      }
+  }
+  .text{
+    margin-left: 50px;
+  }
+  
+  .project {
+    background-color: black;
+    /* Carosel */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 20px;
+    animation-name: glowing;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+  }
+  /* Glowing a circle */
+  @keyframes glowing {
+    0% {
+        box-shadow: 0 0 5px gold, 0 5 10px gold, 0 10 15px gold;
+      }
+      50%{
+        
+        box-shadow: 0 0 10px rgb(248, 2, 195), 0 0 20px rgb(235, 6, 223), 0 0 30px gold;
+      }
+      100%,1% {
+        box-shadow: 0 0 15px white, 0 0 30px #74f611, 0 0 50px #ff00ff;
+      }
+      1%,0%{
+        box-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
+      }
+}
+
+  .project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    /* glowing gold; */
+  }
+  .project1{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    /* card */
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 20px;
+    border: solid;
+  }
+
+  /* Keyframes for the project to be in a carosel way */
+    .project1{
+        animation-name: project1;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes project1 {
+        0% { 
+            transform: translateX(0);
+        }
+        50% { 
+            transform: translateX(10px);
+        }
+        100% { 
+            transform: translateX(0);
+        }
+    }
+  .project1:hover{
+    box-shadow: 0 0 20px 10px gold;
+    animation-play-state:paused ;
+  }
+  .details{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .logo{
+    width: 30px;
+  }
+  .link{
+    text-decoration: none;
+    color: gold;
+  }
+  .link:hover{
+    color: white;
+  }
+
+  .contact-form{
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 20px;
+    border: solid;
+    background-color: black;
+    color: gold;
+    animation-name: contact-form;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  .contact-form:hover{
+    box-shadow: 0 0 20px 10px gold;
+    animation-play-state: paused;
+
+}
+
+    @keyframes contact-form {
+        0% { 
+            transform: translateY(0);
+        }
+        50% { 
+            transform: translateY(10px);
+        }
+        100% { 
+            transform: translateY(0);
+        }
+    }
+
+    .name{
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+    }
+    /* Animation for when a person starts typing in the name field then placeholder movers to the border line*/
+    .name:hover{
+        transform: scale3d(1.1, 1.1, 1.1);
+        transition: transform 1s ease-in-out;
+        border: gold 1px;
+
+
+    }
+    .email{
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .email:hover{
+        transform: scale3d(1.1, 1.1, 1.1);
+        transition: transform 1s ease-in-out;
+        border: gold 1px;
+    }
+    
+    
+  
+  footer {
+    display: flex;
+    padding: 1rem;
+    background: black;
+    border: solid 2px;
+    border-radius: 10px;
+    box-shadow:0 0 20px 10px gold ;
+    margin: 10px 10px 10px 10px;
+  }
+  .footer2{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  
